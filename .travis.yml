@@ -16,6 +16,7 @@ deploy:
     runtime: "go1.x"
     handler_name: "lambda_handler"
     on: go
+    zip: .
 
 after_deploy:
   - ls -lah
