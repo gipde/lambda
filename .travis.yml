@@ -11,6 +11,9 @@ deploy:
     region: "eu-west-1"
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
     
-    handler_name: "lambda_handler.call"
+    # name of python file
+    module_name: "lambda_handler" 
+    # name of fn
+    handler_name: "call"          
 
     on: python
