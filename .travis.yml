@@ -11,3 +11,4 @@ deploy:
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
     runtime: "go1.x"
     handler_name: "lambda_handler"
+    on: go
