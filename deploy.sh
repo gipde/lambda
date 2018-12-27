@@ -4,7 +4,7 @@ FNAME=lambda_handler_js
 zip $ZIPFILE index.js
 
 # Handler = Filename.js + FN-Name
-# handler lambdfa_handler.call
+# handler index.call
 
 if ! aws lambda get-function --function-name $FNAME 1> /dev/null 2>&1;  then
     echo "Create Function $FNMAE..."

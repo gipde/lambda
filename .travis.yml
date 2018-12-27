@@ -6,9 +6,14 @@ script:
 deploy:
   - provider: lambda
     function_name: "lambda-travis-js"
-    region: "eu-west-1"
-    role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
     runtime: "nodejs8.10"
+
+    # AWS Region (Ireland)
+    region: "eu-west-1"
+    # AWS IAM
+    role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
+
+    # Look out: filename ist statically set to index and will be prepended!
     handler_name: "call"
-#    skip_cleanup: true
+    # deploy on branch js
     on: js
