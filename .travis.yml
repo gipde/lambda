@@ -1,8 +1,7 @@
 language: go
 
-# branches:
-#   only:
-#   - /.*/
+# override default build command
+script: go build lambda_handler.go
 
 before_deploy:
   - ls -lah
