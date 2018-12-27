@@ -1,11 +1,14 @@
 language: go
 
 # override default build command
-script: go build lambda_handler.go
+script: 
+  - go build lambda_handler.go
+  - zip lambda_handler.zip lambda_handler
 
 before_deploy:
   - ls -lah
   - find .
+  - printenv
 
 deploy:
   - provider: lambda
@@ -16,7 +19,7 @@ deploy:
     runtime: "go1.x"
     handler_name: "lambda_handler"
     on: go
-    zip: .
+    zip: lambda_handler.zip
 
 after_deploy:
   - ls -lah
