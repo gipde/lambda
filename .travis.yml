@@ -1,5 +1,7 @@
 language: java
 
+script: ./gradlew build
+
 deploy:
   - provider: lambda
     function_name: "lambda-travis-java"
