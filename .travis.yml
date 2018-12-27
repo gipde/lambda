@@ -1,5 +1,9 @@
 language: go
 
+branches:
+  only:
+  - /.*/
+
 deploy:
   - provider: lambda
     function_name: "lambda-travis-go"
