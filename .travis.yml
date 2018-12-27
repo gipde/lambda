@@ -1,13 +1,13 @@
 language: go
 
-branches:
-  only:
-  - /.*/
+# branches:
+#   only:
+#   - /.*/
 
 deploy:
   - provider: lambda
     function_name: "lambda-travis-go"
-    region: "	eu-west-1"
+    region: "eu-west-1"
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
     runtime: "go1.x"
     handler_name: "lambda_handler"
