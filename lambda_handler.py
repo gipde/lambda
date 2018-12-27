@@ -1,6 +1,5 @@
 def call(event, context):
-    message = 'Hello {} {}!'.format(event['first_name'], 
-                                    event['last_name'])  
+    message = 'Hello {} {}!'.format(event)  
     return { 
         'message' : message
     }  
