@@ -13,7 +13,8 @@ deploy:
     # AWS IAM
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
 
-    # Look out: filename ist statically set to index and will be prepended!
+    # name of js file
+    module_name: "lambda_handler" 
     handler_name: "call"
     # deploy on branch js
     on: js
