@@ -2,7 +2,7 @@ language: go
 
 # override default build command
 script: 
-  - go build lambda_handler.go
+  - go build -o lambda_handler.bin lambda_handler.go
 #  - zip lambda_handler.zip lambda_handler
 
 deploy:
@@ -12,8 +12,9 @@ deploy:
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
     runtime: "go1.x"
  
-    module_name: ""
-    handler_name: "lambda_handler"
+    # workaround, for handler_name (concated via .)
+    module_name: "lambda_handler"
+    handler_name: "bin"
  
     on: go
 #    skip_cleanup: true
