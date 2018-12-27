@@ -7,6 +7,5 @@ deploy:
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
     runtime: "java8"
     zip: "build/classes/java/main"
-    module_name: "com.schneidernet.Handler" 
-    handler_name: "handleRequest"
+    module_name: "com.schneidernet.Handler::handleRequest"
     on: java
