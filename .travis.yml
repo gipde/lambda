@@ -9,6 +9,7 @@ before_deploy:
   - find .
 
 deploy:
+  skip_cleanup: true
   - provider: lambda
     function_name: "lambda-travis-go"
     region: "eu-west-1"
