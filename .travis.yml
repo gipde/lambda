@@ -9,6 +9,6 @@ deploy:
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
     runtime: "java8"
     zip: "build/libs/lambda.jar"
-    module_name: "com.schneidernet.Handler::handleRequest"
-    handler_name: ""
+    module_name: "com.schneidernet"
+    handler_name: "Handler::handleRequest"
     on: java
