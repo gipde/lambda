@@ -1,0 +1,9 @@
+language: python
+
+deploy:
+  - provider: lambda
+    function_name: "lambda-travis-python"
+    region: "	eu-west-1"
+    role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
+    runtime: "python3.6"
+    handler_name: "lambda_handler.call"
