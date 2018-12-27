@@ -4,11 +4,18 @@ script: ./gradlew build
 
 deploy:
   - provider: lambda
+
     function_name: "lambda-travis-java"
     region: "eu-west-1"
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
     runtime: "java8"
+
+    # need to declare explicit jar file
     zip: "build/libs/lambda.jar"
+
+    # module_name is equiv to package name and separated via . from class::method
     module_name: "com.schneidernet"
     handler_name: "Handler::handleRequest"
+
+    # branch
     on: java
