@@ -16,3 +16,9 @@ deploy:
     runtime: "go1.x"
     handler_name: "lambda_handler"
     on: go
+
+after_deploy:
+  - ls -lah
+  - ls -lah $TMP
+  - for %a in /tmp/*.zip; do unzip -t $a; done
+  
