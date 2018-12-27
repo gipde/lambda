@@ -4,6 +4,10 @@ language: go
 #   only:
 #   - /.*/
 
+before_deploy:
+  - ls -lah
+  - find .
+
 deploy:
   - provider: lambda
     function_name: "lambda-travis-go"
