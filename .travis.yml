@@ -8,7 +8,7 @@ deploy:
     function_name: "lambda-travis-python"
     runtime: "python3.7"
 
-    region: "	eu-west-1"
+    region: "eu-west-1"
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
     
     handler_name: "lambda_handler.call"
