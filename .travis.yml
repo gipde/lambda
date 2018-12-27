@@ -1,9 +1,7 @@
 language: go
 
 # override default build command
-script: 
-  - go build -o lambda_handler.bin lambda_handler.go
-#  - zip lambda_handler.zip lambda_handler
+script: go build -o lambda_handler.bin lambda_handler.go
 
 deploy:
   - provider: lambda
@@ -17,5 +15,3 @@ deploy:
     handler_name: "bin"
  
     on: go
-#    skip_cleanup: true
-#    zip: lambda_handler.zip
