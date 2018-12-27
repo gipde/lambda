@@ -3,26 +3,18 @@ language: go
 # override default build command
 script: 
   - go build lambda_handler.go
-  - zip lambda_handler.zip lambda_handler
-
-before_deploy:
-  - ls -lah
-  - find .
-  - printenv
+#  - zip lambda_handler.zip lambda_handler
 
 deploy:
   - provider: lambda
-    skip_cleanup: true
     function_name: "lambda-travis-go"
     region: "eu-west-1"
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
     runtime: "go1.x"
+ 
+    module_name: ""
     handler_name: "lambda_handler"
+ 
     on: go
-    zip: lambda_handler.zip
-
-after_deploy:
-  - ls -lah
-  - ls -lah $TMP
-  - for %a in /tmp/*.zip; do unzip -t $a; done
-  
+#    skip_cleanup: true
+#    zip: lambda_handler.zip
