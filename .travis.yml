@@ -10,8 +10,8 @@ deploy:
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
     runtime: "java8"
 
-    # need to declare explicit jar file
-    zip: "build/libs/lambda.jar"
+    # need to declare explicit jar/zip file
+    zip: "build/distributions/lambda.zip"
 
     # module_name is equiv to package name and separated via . from class::method
     module_name: "com.schneidernet"
