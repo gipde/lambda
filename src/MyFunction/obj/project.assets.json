@@ -3397,11 +3397,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/werner/src/lambda/dotnet/src/MyFunction/MyFunction.csproj",
+      "projectUniqueName": "/Users/werner/src/lambda/src/MyFunction/MyFunction.csproj",
       "projectName": "MyFunction",
-      "projectPath": "/Users/werner/src/lambda/dotnet/src/MyFunction/MyFunction.csproj",
+      "projectPath": "/Users/werner/src/lambda/src/MyFunction/MyFunction.csproj",
       "packagesPath": "/Users/werner/.nuget/packages/",
-      "outputPath": "/Users/werner/src/lambda/dotnet/src/MyFunction/obj/",
+      "outputPath": "/Users/werner/src/lambda/src/MyFunction/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

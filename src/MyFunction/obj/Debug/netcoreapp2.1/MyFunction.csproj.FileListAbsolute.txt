@@ -9,3 +9,14 @@
 /Users/werner/src/lambda/dotnet/src/MyFunction/obj/Debug/netcoreapp2.1/MyFunction.AssemblyInfo.cs
 /Users/werner/src/lambda/dotnet/src/MyFunction/obj/Debug/netcoreapp2.1/MyFunction.dll
 /Users/werner/src/lambda/dotnet/src/MyFunction/obj/Debug/netcoreapp2.1/MyFunction.pdb
+/Users/werner/src/lambda/src/MyFunction/bin/Debug/netcoreapp2.1/MyFunction.deps.json
+/Users/werner/src/lambda/src/MyFunction/bin/Debug/netcoreapp2.1/MyFunction.runtimeconfig.json
+/Users/werner/src/lambda/src/MyFunction/bin/Debug/netcoreapp2.1/MyFunction.runtimeconfig.dev.json
+/Users/werner/src/lambda/src/MyFunction/bin/Debug/netcoreapp2.1/MyFunction.dll
+/Users/werner/src/lambda/src/MyFunction/bin/Debug/netcoreapp2.1/MyFunction.pdb
+/Users/werner/src/lambda/src/MyFunction/obj/Debug/netcoreapp2.1/MyFunction.csprojAssemblyReference.cache
+/Users/werner/src/lambda/src/MyFunction/obj/Debug/netcoreapp2.1/MyFunction.csproj.CoreCompileInputs.cache
+/Users/werner/src/lambda/src/MyFunction/obj/Debug/netcoreapp2.1/MyFunction.AssemblyInfoInputs.cache
+/Users/werner/src/lambda/src/MyFunction/obj/Debug/netcoreapp2.1/MyFunction.AssemblyInfo.cs
+/Users/werner/src/lambda/src/MyFunction/obj/Debug/netcoreapp2.1/MyFunction.dll
+/Users/werner/src/lambda/src/MyFunction/obj/Debug/netcoreapp2.1/MyFunction.pdb

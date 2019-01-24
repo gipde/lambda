@@ -9,11 +9,13 @@
   ],
 
   "profile":"default",
-  "region" : "eu-west1",
+  "region" : "eu-west-1",
   "configuration" : "Release",
   "framework" : "netcoreapp2.1",
   "function-runtime":"dotnetcore2.1",
   "function-memory-size" : 256,
   "function-timeout" : 30,
-  "function-handler" : "MyFunction::MyFunction.Function::FunctionHandler"
+  "function-handler" : "MyFunction::MyFunction.Function::FunctionHandler",
+  "function-name": "lambda-travis-dotnet",
+  "function-role":"arn:aws:iam::854014537498:role/lambda_basic_execution"
 }

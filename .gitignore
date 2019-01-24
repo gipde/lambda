@@ -1,0 +1,4 @@
+src/MyFunction/bin
+src/MyFunction/obj
+test/MyFunction.Tests/bin
+test/MyFunction.Tests/obj
