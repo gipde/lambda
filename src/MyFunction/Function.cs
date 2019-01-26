@@ -13,14 +13,14 @@ namespace MyFunction
 
     public class Person
     {
-        string Name;
-        private string v;
 
         public Person(string v)
         {
-            this.v = v;
+            this.Name = v;
         }
-        override public string ToString() => v;
+        public string Name { get; private set; }
+
+        override public string ToString() => Name;
 
     }
     public class Function

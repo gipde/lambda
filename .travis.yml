@@ -5,16 +5,14 @@ dotnet: 2.1.502
 
 # override default build command
 script: 
-  - cd src/MyFunction
-  - dotnet info
   - dotnet restore
   - dotnet list package
-  - dotnet tool list -g
+  - dotnet test
   - dotnet lambda deploy-function
 
 deploy:
   - provider: lambda
-    function_name: "lambda-travis-go"
+    function_name: "lambda-travis-dotnet"
     region: "eu-west-1"
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
     runtime: "dotnet"
@@ -23,4 +21,4 @@ deploy:
     module_name: "lambda_handler"
     handler_name: "bin"
  
-    on: go
+    on: dotnet
