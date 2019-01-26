@@ -1,7 +1,7 @@
 language: csharp
 mono: none
 dotnet: 2.2.103
-os: windows
+#os: windows
 
 # override default build command
 script: 
