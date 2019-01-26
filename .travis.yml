@@ -1,13 +1,14 @@
 language: csharp
 mono: none
-dotnet: 2.1.502
-#os: windows
+# dotnet: 2.1.502
+dotnet: 2.2.100
+
 
 # override default build command
 script: 
   - dotnet restore
-  - dotnet list package
   - dotnet test
+  - cd src/MyFunction
   - dotnet lambda deploy-function
 
 deploy:
