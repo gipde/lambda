@@ -8,11 +8,11 @@ dotnet: 2.1.403
 # override default build command
 script: 
   - dotnet restore
-  - dotnet tool install -g Amazon.Lambda.Tools
   - dotnet tool list -g
   - dotnet test test/MyFunction.Tests/
   - cd src/MyFunction
-  - dotnet lambda deploy-function
+  - dotnet tool install --tool-path tool Amazon.Lambda.Tools
+  - tool/dotnet-lambda deploy-function
 
 # deploy:
 #   - provider: lambda
