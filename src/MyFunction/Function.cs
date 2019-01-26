@@ -34,6 +34,7 @@ namespace MyFunction
         /// <returns></returns>
         public Person FunctionHandler(Person input, ILambdaContext context)
         {
+            Console.WriteLine("Person: ", input);
             if (input == null)
             {
                 throw new ArgumentNullException(nameof(input));
