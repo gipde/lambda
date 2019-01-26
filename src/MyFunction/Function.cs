@@ -35,6 +35,9 @@ namespace MyFunction
         public Person FunctionHandler(Person input, ILambdaContext context)
         {
             Console.WriteLine("Person: ", input);
+
+            LambdaLogger.Log("via Logger: " + input);
+
             if (input == null)
             {
                 throw new ArgumentNullException(nameof(input));
