@@ -8,8 +8,6 @@ using Amazon.Lambda.Serialization.Json;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
-
-
 namespace MyFunction
 {
 
@@ -36,6 +34,11 @@ namespace MyFunction
         /// <returns></returns>
         public string FunctionHandler(Person input, ILambdaContext context)
         {
+            if (input == null)
+            {
+                throw new ArgumentNullException(nameof(input));
+            }
+
             return input.ToString();
         }
     }
