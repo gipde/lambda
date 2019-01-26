@@ -8,7 +8,8 @@ dotnet: 2.1.403
 # override default build command
 script: 
   - dotnet restore
-  - dotnet test
+  - dotnet tool install Amazon.Lambda.Tools
+  - dotnet test test/MyFunction.Tests/
   - cd src/MyFunction
   - dotnet lambda deploy-function
 
@@ -17,7 +18,7 @@ deploy:
     function_name: "lambda-travis-dotnet"
     region: "eu-west-1"
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
-    runtime: "dotnet"
+    runtime: "dotnetcore2.1"
  
     # workaround, for handler_name (concated via .)
     module_name: "lambda_handler"
