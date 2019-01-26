@@ -32,14 +32,14 @@ namespace MyFunction
         /// <param name="input"></param>
         /// <param name="context"></param>
         /// <returns></returns>
-        public string FunctionHandler(Person input, ILambdaContext context)
+        public Person FunctionHandler(Person input, ILambdaContext context)
         {
             if (input == null)
             {
                 throw new ArgumentNullException(nameof(input));
             }
 
-            return input.ToString();
+            return input;
         }
     }
 }
