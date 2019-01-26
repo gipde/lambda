@@ -1,5 +1,4 @@
 language: csharp
-dotnet: latest
 mono: none
 
 # override default build command
