@@ -9,19 +9,20 @@ dotnet: 2.1.403
 script: 
   - dotnet restore
   - dotnet tool install -g Amazon.Lambda.Tools
+  - dotnet tool list -g
   - dotnet test test/MyFunction.Tests/
   - cd src/MyFunction
   - dotnet lambda deploy-function
 
-deploy:
-  - provider: lambda
-    function_name: "lambda-travis-dotnet"
-    region: "eu-west-1"
-    role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
-    runtime: "dotnetcore2.1"
+# deploy:
+#   - provider: lambda
+#     function_name: "lambda-travis-dotnet"
+#     region: "eu-west-1"
+#     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
+#     runtime: "dotnetcore2.1"
  
-    # workaround, for handler_name (concated via .)
-    module_name: "lambda_handler"
-    handler_name: "bin"
+#     # workaround, for handler_name (concated via .)
+#     module_name: "lambda_handler"
+#     handler_name: "bin"
  
-    on: dotnet
+#     on: dotnet

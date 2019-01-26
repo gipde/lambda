@@ -37,6 +37,7 @@ namespace MyFunction
             Console.WriteLine("Person: ", input);
 
             LambdaLogger.Log("via Logger: " + input);
+            context.Logger.Log("via context: " + input);
 
             if (input == null)
             {
