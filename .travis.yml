@@ -1,5 +1,5 @@
 language: csharp
-dotnet: 2.2.1
+dotnet: latest
 mono: none
 
 # override default build command
@@ -16,7 +16,7 @@ deploy:
     function_name: "lambda-travis-go"
     region: "eu-west-1"
     role: "arn:aws:iam::854014537498:role/lambda_basic_execution"
-    runtime: "go1.x"
+    runtime: "dotnet"
  
     # workaround, for handler_name (concated via .)
     module_name: "lambda_handler"
